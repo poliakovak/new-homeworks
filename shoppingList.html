@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My shopping list</h1>
+    <ul id="header"> Enter a new item:
+        <input type="text" id="main">
+        <input type="button" id="button" value="Add item">
+    </ul>
+
+    <script>
+        let button = document.getElementById('button');
+        button.style = 'font-size: 8px; margin-left: 20px; color: #666';
+        let header = document.getElementById('header');
+        let input = document.getElementById('main');
+        input.focus();
+        button.addEventListener('click',function(){
+        let value = input.value;
+        input.value = "";
+        let li = document.createElement('li');
+        let text = document.createElement('span');
+        let deleteElement = document.createElement('input');
+        deleteElement.type = "button";
+        deleteElement.value = "Delete";
+        deleteElement.style = 'font-size: 8px; margin-left: 20px; color: #666';
+
+        header.appendChild(li);
+        text.innerHTML = value;
+        li.appendChild(text);
+        li.appendChild(deleteElement);
+
+        deleteElement.addEventListener('click',function(){
+            deleteElement.parentElement.remove();
+        })
+        
+        })
+    </script>
+    
+</body>
+</html>

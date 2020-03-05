@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <h1 style="color: lightblue; font: 2em sans-serif;">Baking</h1>
+    <ol id="list" style="width: 280px; height: 300px;">
+        <li>Mix flour, baking powder, sugar, and salt.</li>
+        <li>In another bowl, mix eggs, milk, and oil.</li>
+        <li>Stir both mixtures together.</li>
+        <li>Fill muffin tray 3/4 full.</li>
+        <li>Bake for 20 minutes.</li>
+      </ol>
+</head>
+<body>
+    <script>
+        let tag = document.getElementById("list");
+        tag.addEventListener('click', function(event){
+            let target = event.target;
+            target.style = 'background: salmon';
+        })
+    </script>
+</body>
+</html>
